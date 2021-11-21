@@ -21,11 +21,16 @@ fs.readFile(originFile, "utf-8", (err, data) => {
         fs.writeFile(`${sassPath}/${component}.scss`, '', (err) => {
             if (err) throw err;
 
-            // open created files
-            exec(`code -r ${htmlPath}/${component}.html ${sassPath}/${component}.scss`, (err) => {
+            // add this style into main style sass
+            fs.appendFile(`${sassPath}/_components.scss`, `@import "${component}";\n`, (err) => {
                 if (err) throw err;
-            });
-            console.log("created Sucessfully");
+
+                // open created files
+                exec(`code -r ${htmlPath}/${component}.html ${sassPath}/${component}.scss`, (err) => {
+                    if (err) throw err;
+                });
+                console.log("created Sucessfully");
+            })
         });
     });
 });
