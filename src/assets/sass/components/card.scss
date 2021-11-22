@@ -1,0 +1,24 @@
+.c-card {
+    @include e-card();
+    padding: spacing('normal');
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.c-card__title {
+    flex-grow: 1;
+    color: $color-title-subdued;
+    font-weight: normal;
+}
+
+.c-card__action {
+    margin-right: spacing();
+}
+
+@media(max-width: 450px) {
+    .c-card__action {
+        margin-right: 0;
+    }
+}

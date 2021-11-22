@@ -3,10 +3,12 @@
 @import "config/colors.scss";
 
 @import "utilities/spacing.scss";
+@import "utilities/mixin-card.scss";
 
 @import "base/fonts.scss";
 @import "base/typography.scss";
 @import "base/global.scss";
 @import "base/links.scss";
 
+@import "components/demo";
 @import "components/components";
