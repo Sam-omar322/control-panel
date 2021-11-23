@@ -7,7 +7,8 @@ const optimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plug
 module.exports = {
     entry: {
         'app':              './src/index.js' , 
-        'assets/js/banner': './src/assets/js/banner.js'
+        'assets/js/banner': './src/assets/js/banner.js',
+        'assets/js/tabs': './src/assets/js/tabs.js'
     },
     output: {
         publicPath: '/',
@@ -47,6 +48,19 @@ module.exports = {
                         options: {
                             name: '[name].[ext]',
                             outputPath: 'assets/fonts',
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(svg|png|jpe?g|gif)$/,
+                exclude: /fonts/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'assets/images',
                         }
                     }
                 ]
@@ -95,6 +109,16 @@ module.exports = {
             template: "./src/components/banner.html",
             filename: "components/banner.html",
             chunks: ['app', 'assets/js/banner'],
+        }),
+        new htmlWebpackPlugin({
+            template: "./src/components/list.html",
+            filename: "components/list.html",
+            chunks: ['app']
+        }),
+        new htmlWebpackPlugin({
+            template: "./src/components/tabs.html",
+            filename: "components/tabs.html",
+            chunks: ['app', 'assets/js/tabs']
         }),
     ]
 };
