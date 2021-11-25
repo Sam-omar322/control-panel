@@ -9,7 +9,8 @@ module.exports = {
         'app':              './src/index.js' , 
         'assets/js/banner': './src/assets/js/banner.js',
         'assets/js/tabs':   './src/assets/js/tabs.js',
-        'assets/js/upload': './src/assets/js/upload.js'
+        'assets/js/upload': './src/assets/js/upload.js',
+        'assets/js/chart':  './src/assets/js/chart'
     },
     output: {
         publicPath: '/',
@@ -150,6 +151,11 @@ module.exports = {
             template: "./src/components/table.html",
             filename: "components/table.html",
             chunks: ['app']
+        }),
+        new htmlWebpackPlugin({
+            template: "./src/components/chart.html",
+            filename: "components/chart.html",
+            chunks: ['app', 'assets/js/chart']
         }),
     ]
 };

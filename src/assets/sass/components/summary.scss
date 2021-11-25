@@ -18,8 +18,29 @@
     font-size: 28px;
     font-weight: bold;
     font-family: $family-heading;
+    &--positive {
+        color: $color-blue;
+    }
+    &--nigative {
+        color: $color-red;
+    }
 }
 
 .c-summary__key {
     font-weight: 600;
+}
+
+.c-summary__boxless {
+    background: none;
+    box-shadow: none;
+    margin-bottom: 0;
+}
+
+.c-summary__small {
+    padding: spacing("small");
+    .c-summary__value,
+    .c-summary__key {
+        font-size: 13px;
+        font-weight: normal;
+    }
 }
