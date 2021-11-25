@@ -126,5 +126,30 @@ module.exports = {
             filename: "components/upload.html",
             chunks: ['app', 'assets/js/upload']
         }),
+        new htmlWebpackPlugin({
+            template: "./src/components/help.html",
+            filename: "components/help.html",
+            chunks: ['app']
+        }),
+        new htmlWebpackPlugin({
+            template: "./src/components/summary.html",
+            filename: "components/summary.html",
+            chunks: ['app']
+        }),
+        new htmlWebpackPlugin({
+            template: "./src/components/actions.html",
+            filename: "components/actions.html",
+            chunks: ['app']
+        }),
+        new htmlWebpackPlugin({
+            template: "./src/components/sidebar.html",
+            filename: "components/sidebar.html",
+            chunks: ['app']
+        }),
+        new htmlWebpackPlugin({
+            template: "./src/components/table.html",
+            filename: "components/table.html",
+            chunks: ['app']
+        }),
     ]
 };

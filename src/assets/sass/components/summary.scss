@@ -1,0 +1,25 @@
+.c-summary {
+    @include e-card;
+    padding: spacing("small") spacing("wide");
+    display: inline-flex;
+}
+
+.c-summary__data {
+    margin-left: spacing("normal");
+    display: flex;
+    flex-direction: column;
+
+    &:last-child {
+        margin-left: ("none");
+    }
+}
+
+.c-summary__value {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: $family-heading;
+}
+
+.c-summary__key {
+    font-weight: 600;
+}

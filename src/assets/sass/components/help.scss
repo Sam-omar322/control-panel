@@ -1,0 +1,16 @@
+.c-help {
+    display: flex;
+    padding: spacing();
+    border-radius: (spacing("small")*2);
+    border: 1px solid rgba(darken($color-primary, 100%), 0.15);
+    margin: spacing("wide") auto;
+    align-items: center;
+    background-color: white;
+    width: fit-content;
+}
+
+.c-help__icon {
+    color: $color-primary;
+    margin-left: spacing("extra-small");
+    font-size: 20px;
+}
