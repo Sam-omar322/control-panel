@@ -97,6 +97,26 @@ module.exports = {
         new htmlWebpackPlugin({
             template: "./src/add-product.html",
             filename: "add-product.html",
+            chunks: ['app', 'assets/js/upload'],
+        }),
+        new htmlWebpackPlugin({
+            template: "./src/add-user.html",
+            filename: "add-user.html",
+            chunks: ['app', 'assets/js/upload'],
+        }),
+        new htmlWebpackPlugin({
+            template: "./src/products.html",
+            filename: "products.html",
+            chunks: ['app'],
+        }),
+        new htmlWebpackPlugin({
+            template: "./src/users.html",
+            filename: "users.html",
+            chunks: ['app'],
+        }),
+        new htmlWebpackPlugin({
+            template: "./src/orders.html",
+            filename: "orders.html",
             chunks: ['app'],
         }),
 
@@ -169,19 +189,21 @@ module.exports = {
 
         // html partials
         new htmlWebpackPartialsPlugin({
+            path: path.join(__dirname, "./src/components/sidebar.html"),
+            location: 'sidebar',
+            template_filename: ['index.html', 'add-product.html', "products.html",
+            'users.html', 'orders.html', 'add-user.html']
+        }),
+        new htmlWebpackPartialsPlugin({
             path: path.join(__dirname, "./src/components/help.html"),
             location: 'help',
-            template_filename: ['index.html', 'add-product.html']
+            template_filename: ['index.html', 'add-product.html', "products.html",
+            'users.html', 'orders.html', 'add-user.html']
         }),
         new htmlWebpackPartialsPlugin({
             path: path.join(__dirname, "./src/components/chart.html"),
             location: 'chart',
             template_filename: ['index.html']
-        }),
-        new htmlWebpackPartialsPlugin({
-            path: path.join(__dirname, "./src/components/sidebar.html"),
-            location: 'sidebar',
-            template_filename: ['index.html', 'add-product.html']
         }),
         new htmlWebpackPartialsPlugin({
             path: path.join(__dirname, "./src/components/banner.html"),

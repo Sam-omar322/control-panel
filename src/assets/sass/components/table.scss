@@ -60,4 +60,5 @@ $product-media-size: 40px;
     display: flex;
     padding-top: spacing("normal");
     padding-left: spacing("normal");
+    flex-direction: row-reverse;
 }
