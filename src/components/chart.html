@@ -1,41 +1,28 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>chart Component's page</title>
-</head>
-<body>
-    <div class="component_container">
-        <div class="c-chart" data-values="[423, 344, 77, 155, 67, 322, 1240, 354, 1678, 442, 543, 989]">
-            <header class="c-chart__header">
-                <div class="c-chart__header__title">
-                    <h3 class="c-chart__title">المبيعات</h3>
-                    <span class="c-chart__date">أكتوبر 2021 03</span>
-                </div>
-                <div class="c-summary c-summary__small c-summary__boxless">
-                    <div class="c-summary__data">
-                        <div class="c-summary__key">التغير الشهري</div>
-                        <div class="c-summary__value c-summary__value--positive">16,6%</div>
-                    </div>
-                    <div class="c-summary__data">
-                        <div class="c-summary__key">المجموع</div>
-                        <div class="c-summary__value">$96.300</div>
-                    </div>
-                    <div class="c-summary__data">
-                        <div class="c-summary__key">آخر ثلاثين يوم</div>
-                        <div class="c-summary__value">$1.300</div>
-                    </div>
-                </div>
-                <div class="c-table__navigation">
-                    <div class="c-table__navigation__arrows">
-                        <button class="c-btn c-btn--icon"><i class="c-icon c-icon--arrow-right2"></i></button>
-                        <button class="c-btn c-btn--icon"><i class="c-icon c-icon--arrow-left2"></i></button>
-                </div>
-            </header>
-            <canvas class="c-chart__data" id="example-chart" width="600" height="300"></canvas>
+<div class="c-chart" data-values="[423, 344, 77, 155, 67, 322, 1240, 354, 1678, 442, 543, 989]">
+    <header class="c-chart__header">
+        <div class="c-chart__header__title">
+            <h3 class="c-chart__title">المبيعات</h3>
+            <span class="c-chart__date">أكتوبر 2021 03</span>
         </div>
-    </div>
-</body>
-</html>
+        <div class="c-summary c-summary__small c-summary__boxless">
+            <div class="c-summary__data">
+                <div class="c-summary__key">التغير الشهري</div>
+                <div class="c-summary__value c-summary__value--positive">16,6%</div>
+            </div>
+            <div class="c-summary__data">
+                <div class="c-summary__key">المجموع</div>
+                <div class="c-summary__value">$96.300</div>
+            </div>
+            <div class="c-summary__data">
+                <div class="c-summary__key">آخر ثلاثين يوم</div>
+                <div class="c-summary__value">$1.300</div>
+            </div>
+        </div>
+        <div class="c-table__navigation">
+            <div class="c-table__navigation__arrows">
+                <button class="c-btn c-btn--icon"><i class="c-icon c-icon--arrow-right2"></i></button>
+                <button class="c-btn c-btn--icon"><i class="c-icon c-icon--arrow-left2"></i></button>
+        </div>
+    </header>
+    <canvas class="c-chart__data" id="example-chart" width="600" height="300"></canvas>
+</div>
