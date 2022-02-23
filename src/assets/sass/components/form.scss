@@ -13,3 +13,12 @@
         margin-right: spacing("small");
     }
 }
+
+@media (max-width: $bp-phone) {
+    .c-form__row {
+        & > * {
+            margin-left: spacing("extra-small");
+            margin-right: spacing("extra-small");
+        }
+    }
+}

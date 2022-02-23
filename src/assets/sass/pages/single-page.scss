@@ -11,3 +11,24 @@
         margin-right: spacing("wide");
     }
 }
+
+@media (max-width: 802px) {
+    .page-header .c-btn:first-of-type {
+        margin-right: spacing();
+    }
+}
+
+@media (max-width: $bp-phone) {
+    .page-header {
+        flex-direction: column;
+        & .c-btn:first-of-type {
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .page-header .c-btn {
+        margin: 0 7px;
+    }
+}
